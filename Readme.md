@@ -9,7 +9,7 @@
 
 <h2>Deploy:</h2>
 
-[Github Pages](https://helderhsilva.github.io/temporaryBadge/)
+[Github Pages](https://helderhsilva.github.io/NLW_Heat_Origin/)
 
 <h2>Challenges:</h2>
 
