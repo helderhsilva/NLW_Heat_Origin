@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --blackBackground: hsl(240, 5%, 7%);
+  --gray: hsl(240, 9%, 89%);
+
+  --gradWhile: linear-gradient(161.24deg, #ff008e -15.25%, #ffcd1e 111.89%);
+  --gradCustom: linear-gradient(161.24deg, #7c57a1 -15.25%, #aaeca0 111.89%);
+
+  --Roboto: 'Roboto', sans-serif;
+  --Rubik: 'Rubik', sans-serif;
+
+  height: 100%;
+  font-family: var(--Roboto);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--blackBackground);
+}
+
+.bodyStyleTwo {
+  font-family: var(--Rubik);
+}
+
+main {
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+
+  background: url(images/background1.svg) no-repeat center/cover;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  
+  
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  background-color: transparent;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+main .exchangeCard {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+
+  margin: 1.5rem 0 0 18rem;
+
+  cursor: pointer;
+
+  border-radius: 8px;
+}
+
+.exchangeCard {
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+}
+
+.exchangeCard:hover {
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.backgroundTwo {
+  background: url(images/background2.svg) no-repeat center/cover;
+}
+
+.container {
+  max-width: 262px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--gray);
+}
+
+.avatar {
+  width: 10rem; /* 1rem = 16px*/
+  margin: 11.5rem auto 0;
+
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+#rotateAnimation {
+  animation: rotation 15s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /* Ajusta a imagem */
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem;
+
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#userLink {
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+}
+
+#userLink:hover {
+  transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex; /* deixa as caixas um ao lado do outro */
+  gap: 0.5rem; /* da uns espaço entre os elementos */
+
+  justify-content: center; /* alinha o elemento ao centro no seu eixo */
+}
+
+li img {
+  border-radius: 0.75rem;
+}
+
+.upMove {
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+}
+
+.upMove:hover {
+  transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+  -webkit-transform: translateY(-0.5rem);
+}
+
+@media screen and (min-width: 540px) {
+  body {
+    position: relative;
+
+    background-image: url(images/degrade1.svg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bodyStyleTwo {
+    background-image: url(images/degrade2.svg);
+    
+  }
+
+  main {
+    width: 358px;
+    height: 50vh;
+    min-height: 540px;
+    background: url(images/backgroundDesk1.svg);
+
+    position: relative;
+
+    border-radius: 1rem;
+  }
+
+
+  .backgroundTwo {
+    background: url(images/backgroundDesk2.svg);
+  }
+
+  .avatar {
+    margin-top: 4.5rem;
+  }
+
+  ul {
+    margin-top: 2.5rem;
+  }
+
+  .fillet {
+    width: 64px;
+    height: 20rem;
+
+    background: var(--gradWhile);
+
+    position: absolute;
+    bottom: 32.5rem;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .filletTwo {
+    width: 64px;
+    height: 20rem;
+
+    background: var(--gradCustom);
+
+    position: absolute;
+    bottom: 32.5rem;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  #breaking {
+    width: 80px;
+    height: 8px;
+
+    background-color: var(--black);
+
+    position: absolute;
+
+    margin: 1rem auto 0 auto;
+  }
+}
